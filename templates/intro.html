@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
+<h2> Introduction </h2>
+
+<h3> Introduction to play the game </h3>
+<a href='{% static "img/PPT.pptx" %}' download> <h3>Download the play guide</h3> </a></li>
+<p> <b>{{ user}}</b> When companies provide extensive product options, it makes predicting and fulfilling customer demand highly complex. This simulation illustrates how a few key decisions can improve the ability of a company to accurately predict and fulfill demand.</p>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+
+<h3>Problem facing supply chain managers</h3>
+
+{% include 'collapseintro.html' %}
+
+</div>
+
+<div class="col-md-6">
+
+<h3>Your First Days as Supply Manager</h3>
+
+{% include 'collapseintro1.html' %}
+<p></p>
+
+</div>
+</div>
+
+
+
+
+<div class="row">
+
+<div class="col-md-6" style="padding:20px;">
+<h2>Meet the team</h2>
+<p> These are the rockstars who help you make better decisions. You should focus on each input from every employee. They look upto your decisions so make sure you utilize their talent well.  </p>
+
+</div>
+
+
+</div>
+
+<div class="row">
+
+
+
+<div class="col-xs-18 col-sm-6 col-md-3" style="height: 350px;">
+          <div class="thumbnail">
+            <img src='{% static "img/3.jpg" %}' alt=""  width="154" height="156">
+              <div class="caption">
+                <h4>	Ranjeet</h4>
+                <p>I am making sure that we have enough knowledge of the upgrades and impact on the demands of those upgrades. The process to figure the best model is the most important. Let's hope we make the best out of the available information.</p>
+
+            </div>
+          </div>
+        </div>
+<div class="col-xs-18 col-sm-6 col-md-3" style="height: 350px;">
+          <div class="thumbnail">
+            <img src='{% static "img/emp2.jpg" %}' alt=""  width="154" height="170">
+              <div class="caption">
+                <h4>	Radha</h4>
+                <p>Forcasting is really hard. Even though we are extremely thorough in our calculations we still can't predict the sales with certainty. I'll be working along with you across the process and help you decide the best possible options. 
+                I am also very excited to work with you. Let's make the best of our collaboration.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src='{% static "img/emp3.jpg" %}' alt=""  width="154" height="156">
+              <div class="caption">
+                <h4>	Clair</h4>
+                <p>Last year I was working a different project but I have shifted to the team to work with you. I hope I get to learn from the best. I have been in the same field for over 5 years now. I hope my work experience and your decision ability will work wonders for the company.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src='{% static "img/emp4.jpg" %}' alt=""  width="154" height="156">
+              <div class="caption">
+                <h4>	Roy</h4>
+                <p>After the reworking on my earlier prediction model I have been able to figure out a much better way to forsee the expected demand. The new method has much better and bigger data set with less uncertainty in results.</p>
+
+            </div>
+          </div>
+        </div>
+  
+
+</div>
+<div class="row">
+<div class="col-md-6" align="right">
+</div>
+<div class="col-md-6" align="right">
+
+
+<button class="btn btn-primary" role="button" id="forcast" >Click to make the forcast</button>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+{% endblock %}

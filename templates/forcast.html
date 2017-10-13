@@ -1,0 +1,399 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block jquery %}
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+    Highcharts.chart('colgraph', {
+    data: {
+        table: 'coltable'
+    },
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Data extracted from a HTML table in the page'
+    },
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'Units'
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' +
+                this.point.y + ' ' + this.point.name.toLowerCase();
+        }
+    }
+
+});
+
+
+        });
+
+
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="width: 80%;">
+<div class="row">
+<div class="col-md-6">
+<div class="row">
+
+ 
+
+
+    
+            
+
+
+            <div id="colgraph"  height:400px;></div>
+            
+
+
+
+
+
+</div>
+
+
+
+<div class="row">
+
+        <table class="table">
+        <thead class="thead-default">
+          <tr>
+              <th>Standard Deviation(Basic)</th>
+              
+            <td>15.2</td>
+              
+          </tr>
+          <tr>
+
+
+        <th>Standard Deviation(Updated)<small> </small></th>
+        
+        <td>9.9</td>
+
+        
+        </tr>
+        
+        </thead>
+        </table>
+        </div> 
+        </div>
+
+
+
+
+    <div class="col-md-6">
+    
+    <div class="row">
+
+            <h2>Forcast the demand <small>Here will be a text to explain</small></h2>
+            
+            <p>Your forecasting team members have come up with a consensus for what they believe
+            demand will be for the mobile phone lines.</p>
+            <p>However, the board of your company is interested in your personal estimates as well.</p>
+            <p>The numbers you will forecast after entering the forecasting room will not affect your production schedule,
+            but they will help you later as you determine where and how to source your products.</p>
+    </div>
+
+    <div class="row">
+    <h2>Data with options <small>(Avg market cost)</small></h2>
+    <table id="1" class="table">
+    <thead class="thead-default">
+        <tr>
+            <th></th>
+            <th>Basic</th>
+            <th>Updated</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <th id="cost">Cost*</th>
+            <td id="emp1a">300 </td>
+            <td id="emp1b">	400</td>
+            
+            
+
+        </tr>
+
+<tr>
+
+            <th id="cost">Price*</th>
+            <td id="emp1a">500 </td>
+            <td id="emp1b">	600</td>
+            
+            
+
+        </tr>
+<tr>
+
+            <th id="cost">Markdown Price</th>
+            <td id="emp1a">200 </td>
+            <td id="emp1b">	300</td>
+            
+            
+
+        </tr>
+        </tbody>
+        </table>
+
+
+
+        <i>may vary depending upon choosen options and vendors</i>
+    </div>
+
+    <div class="row">
+<form method='POST' action='' enctype='multipart/form-data'>{% csrf_token %}
+    
+{{ form|crispy }}
+<input type='submit' class='btn btn-primary' id="submit" value='Submit' />
+    
+<div align="right">
+
+
+</form>
+    </div>
+        
+    </div>    
+
+
+
+</div>
+</div>
+
+
+
+
+    <div class="row">
+        
+
+
+<div class="col-md-6">
+        <div class="row">
+          
+<h2>Data from previous two years</h2>
+<table id="previousdata" class="table">
+    <thead class="thead-default">
+        <tr>
+            <th>#</th>
+            <th>Year1</th>
+            <th>Year2</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <th id="employee1">Jan</th>
+            <td id="emp1a">68 </td>
+            <td id="emp1b">	81</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Feb</th>
+            <td id="emp1a">70 </td>
+            <td id="emp1b">96</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Mar</th>
+            <td id="emp1a">80 </td>
+            <td id="emp1b">86</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Apr</th>
+            <td id="emp1a">80 </td>
+            <td id="emp1b">91</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">May</th>
+            <td id="emp1a">68 </td>
+            <td id="emp1b">81</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Jun</th>
+            <td id="emp1a">77 </td>
+            <td id="emp1b">93</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Jul</th>
+            <td id="emp1a">85 </td>
+            <td id="emp1b">90</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Aug</th>
+            <td id="emp1a">80 </td>
+            <td id="emp1b">100</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Sep</th>
+            <td id="emp1a">71 </td>
+            <td id="emp1b">93</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Oct</th>
+            <td id="emp1a">82 </td>
+            <td id="emp1b">101</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Nov</th>
+            <td id="emp1a">93 </td>
+            <td id="emp1b">108</td>
+            
+            
+
+        </tr>
+        <tr>
+
+            <th id="employee1">Dec</th>
+            <td id="emp1a">156 </td>
+            <td id="emp1b">193</td>
+            
+            
+
+        </tr>
+        
+        
+    </tbody>
+</table>
+
+        </div>           
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div style="display:none; ">
+<table id="coltable">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Basic</th>
+            <th>Updated</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <th id="employee1">{{ demand.employee_name1 }}</th>
+            <td id="emp1a">{{ demand.monthly_forcast1 }} </td>
+            <td id="emp1b">{{ demand.monthly_forcast_update1 }}</td>
+
+        </tr>
+        <tr>
+            <th id="employee2">{{ demand.employee_name2 }}</th>
+            <td id="emp2a">{{ demand.monthly_forcast2 }}</td>
+            <td id="emp2b">{{ demand.monthly_forcast_update2 }}</td>
+
+        </tr>
+        <tr>
+            <th id="employee3">{{ demand.employee_name3 }}</th>
+            <td id="emp3a">{{ demand.monthly_forcast3 }}</td>
+            <td id="emp3b">{{ demand.monthly_forcast_update3 }}</td>
+
+        </tr>
+        <tr>
+            <th id="employee4">{{ demand.employee_name4 }}</th>
+            <td id="emp4a">{{ demand.monthly_forcast4 }}</td>
+            <td id="emp4b">{{ demand.monthly_forcast_update4 }}</td>
+
+        </tr>
+
+        <tr>
+            <th id="employee5">Avg</th>
+            <td id="emp5a">98</td>
+            <td id="emp5b">88</td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+{% endblock content %}

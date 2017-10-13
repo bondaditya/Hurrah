@@ -1,0 +1,42 @@
+
+{% load staticfiles %}
+<head>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+</head>
+
+
+{% if user.is_authenticated %}
+{% include 'navbar.html' %}
+{% include 'head_css.html' %}
+    <body class="mybody">
+    
+    
+
+    {% else %}
+    
+    {% endif %}
+
+
+
+            {% block content %}
+            {% endblock %}
+
+
+
+
+{% include "javascript.html" %}
+
+    <script>
+    $(document).ready(function(){
+        {% block jquery %}
+        {% endblock %}
+    });
+    </script>
+</body>
+</div>
+
+</html>

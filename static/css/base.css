@@ -1,0 +1,110 @@
+h1 {
+
+	color: #2F4F4F;
+}
+p {
+    color: #2F4F4F;
+    
+
+}
+a {
+    font-color: white;
+}
+html {
+    height: 100%;
+}
+
+.mybody {
+    background-color: #EDE1E3;
+}
+.myhr {
+    color: black;
+    height: 5px;
+    width: 5px;
+}
+
+h2 {
+    color: #696969;
+    
+    font-size: 125%;
+
+}
+h3 {
+    color: #008080;
+    
+
+    
+    font-size: 275%;
+}
+small {
+    color: #696969;    
+    font-size: 175%;
+}
+
+
+
+button {
+     width: 250px;
+     height: 40px;
+     background-color: #DAF7FE;
+     color: #273746;
+     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+.btn {
+     width: 250px;
+     height: 40px;
+     background-color: #074D5E;
+     color: white;
+     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+
+
+
+
+
+
+.checkboxTwo {
+width: 150px;
+    height: 40px;
+    background: #B45FBC;
+    margin: 20px 60px;
+
+    border-radius: 50px;
+    position: relative;
+}
+.checkboxTwo:before {
+    content: '';
+    position: absolute;
+    top: 19px;
+    left: 14px;
+    height: 2px;
+    width: 120px;
+    background: #111;
+}
+.checkboxTwo label {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 9px;
+    z-index: 1;
+    left: 12px;
+    background: #ddd;
+}
+.checkboxTwo input[type=checkbox]:checked + label {
+    left: 115px;
+    background: #26ca28;
+}

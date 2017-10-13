@@ -1,0 +1,621 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block jquery %}
+
+    $('input[type="checkbox"]').click(function(){
+
+
+
+            if($('#1').is(":checked")){
+                if($('#2').is(":checked") && $('#3').is(":checked") && $('#4').is(":checked")){
+                
+                $("#img1").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                $("#price").html(600);
+                $("#cost").html(380);
+                $("#profit").html(220);
+                $("#impact_price").html(100);
+                $("#impact_cost").html(80);
+                $("#impact_profit").html(20);
+                $("#emp1b").html(96);
+                
+                $("#emp2b").html(122);
+                $("#emp3b").html(92);
+                $("#emp4b").html(99);
+                $("#emp5b").html(103);
+                
+
+                }
+                
+                      
+
+                else if($('#2').is(":checked") && $('#3').is(":checked") && $('#4').is(":not(:checked)") ){
+                    $("#img2").show();$("#img1").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                    $("#price").html(570);
+                $("#cost").html(355);
+                
+                $("#profit").html(215);
+
+                $("#impact_price").html(70);
+                $("#impact_cost").html(55);
+                $("#impact_profit").html(15);
+                $("#emp1b").html(80);
+                
+                $("#emp2b").html(98);
+                $("#emp3b").html(110);
+                $("#emp4b").html(95);
+                $("#emp5b").html(96);
+                
+                    
+                }
+                      
+                else if($('#2').is(":checked") && $('#3').is(":not(:checked)") && $('#4').is(":checked") ){
+                    $("#img3").show();$("#img2").hide();$("#img1").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                    $("#price").html(565);
+                $("#cost").html(355);
+                $("#profit").html(210);
+                $("#impact_price").html(65);
+                $("#impact_cost").html(55);
+
+                $("#impact_profit").html(10);
+                $("#emp1b").html(85);
+                
+                $("#emp2b").html(100);
+                $("#emp3b").html(112);
+                $("#emp4b").html(99);
+                $("#emp5b").html(94);
+                
+                }
+                else if($('#2').is(":not(:checked)") && $('#3').is(":checked") && $('#4').is(":checked") ){
+                     $("#img4").show();$("#img2").hide();$("#img3").hide();$("#img1").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                     $("#price").html(585);
+                $("#cost").html(370);
+                $("#profit").html(215);
+                $("#impact_price").html(85);
+                $("#impact_cost").html(70);
+                $("#impact_profit").html(15);
+                $("#emp1b").html(96);
+                
+                $("#emp2b").html(125);
+                $("#emp3b").html(120);
+                $("#emp4b").html(100);
+                $("#emp5b").html(113);
+                
+                }
+                else if($('#2').is(":not(:checked)") && $('#3').is(":not(:checked)") && $('#4').is(":not(:checked)") ){
+                     $("#img5").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img1").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                     $("#price").html(515);
+                $("#cost").html(310);
+                $("#profit").html(205);
+                $("#impact_price").html(15);
+                $("#impact_cost").html(10);
+                $("#impact_profit").html(5);
+                $("#emp1b").html(98);
+                
+                $("#emp2b").html(100);
+                $("#emp3b").html(115);
+                $("#emp4b").html(100);
+                $("#emp5b").html(104);
+                
+                }
+                else if($('#2').is(":not(:checked)") && $('#3').is(":checked") && $('#4').is(":not(:checked)") ){
+                    $("#img6").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img1").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                    $("#price").html(535);
+                $("#cost").html(325);
+                $("#profit").html(210);
+                $("#impact_price").html(35);
+                $("#impact_cost").html(25);
+                $("#impact_profit").html(10);
+                $("#emp1b").html(95);
+                
+                $("#emp2b").html(90);
+                $("#emp3b").html(110);
+                $("#emp4b").html(95);
+                $("#emp5b").html(98);
+                
+                }
+                else if($('#2').is(":checked") && $('#3').is(":not(:checked)") && $('#4').is(":not(:checked)") ){
+                    $("#img7").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img1").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                    $("#price").html(545);
+                $("#cost").html(335);
+                $("#profit").html(210);
+                $("#impact_price").html(45);
+                $("#impact_cost").html(35);
+                $("#impact_profit").html(10);
+                $("#emp1b").html(80);
+                
+                $("#emp2b").html(100);
+                $("#emp3b").html(105);
+                $("#emp4b").html(90);
+                $("#emp5b").html(95);
+                
+                }
+                else if($('#2').is(":not(:checked)") && $('#3').is(":checked") && $('#4').is(":not(:checked)") ){
+                    $("#img8").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img1").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                    $("#price").html(520);
+                $("#cost").html(320);
+                $("#profit").html(200);
+                $("#impact_price").html(20);
+                $("#impact_cost").html(20);
+                $("#impact_profit").html(0);
+                $("#emp1b").html(85);
+                
+                $("#emp2b").html(100);
+                $("#emp3b").html(120);
+                $("#emp4b").html(105);
+                $("#emp5b").html(101);
+                
+                }
+                else if($('#2').is(":not(:checked)") && $('#3').is(":not(:checked)") && $('#4').is(":checked") ){
+                    $("#img9").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img1").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                    $("#price").html(530);
+                $("#cost").html(325);
+                $("#profit").html(210);
+                $("#impact_price").html(30);
+                $("#impact_cost").html(25);
+                $("#impact_profit").html(5);
+                $("#emp1b").html(88);
+                
+                $("#emp2b").html(97);
+                $("#emp3b").html(115);
+                $("#emp4b").html(105);
+                $("#emp5b").html(100);
+                
+                }
+                }
+
+            
+            else if($('#2').is(":checked")){
+                if($('#1').is(":not(:checked)") && $('#3').is(":checked") && $('#4').is(":checked")){
+                        $("#img10").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img1").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                        $("#price").html(585);
+                $("#cost").html(370);
+                $("#profit").html(210);
+                $("#impact_price").html(85);
+                $("#impact_cost").html(70);
+                $("#impact_profit").html(10);
+                $("#emp1b").html(90);
+                
+                $("#emp2b").html(90);
+                $("#emp3b").html(105);
+                $("#emp4b").html(95);
+                $("#emp5b").html(95);
+                  }
+
+
+                else if($('#1').is(":not(:checked)") && $('#3').is(":checked") && $('#4').is(":not(:checked)")){
+                    $("#img11").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img1").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                    $("#price").html(555);
+                $("#cost").html(345);
+                $("#profit").html(210);
+                $("#impact_price").html(55);
+                $("#impact_cost").html(45);
+                $("#impact_profit").html(10);
+                $("#emp1b").html(90);
+                
+                $("#emp2b").html(115);
+                $("#emp3b").html(120);
+                $("#emp4b").html(105);
+                $("#emp5b").html(108);
+}
+                else if($('#1').is(":not(:checked)") && $('#3').is(":not(:checked)") && $('#4').is(":checked")){
+                    $("#img12").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img1").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                    $("#price").html(565);
+                $("#cost").html(350);
+                $("#profit").html(215);
+                $("#impact_price").html(65);
+                $("#impact_cost").html(50);
+                $("#impact_profit").html(15);
+                $("#emp1b").html(80);
+                
+                $("#emp2b").html(90);
+                $("#emp3b").html(100);
+                $("#emp4b").html(90);
+                $("#emp5b").html(90);
+                }
+                else if($('#1').is(":not(:checked)") && $('#3').is(":not(:checked)") && $('#4').is(":not(:checked)")){
+                    $("#img13").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img1").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                    $("#price").html(535);
+                $("#cost").html(325);
+                $("#profit").html(210);
+                $("#impact_price").html(35);
+                $("#impact_cost").html(25);
+                $("#impact_profit").html(10);
+                $("#emp1b").html(85);
+                
+                $("#emp2b").html(95);
+                $("#emp3b").html(105);
+                $("#emp4b").html(95);
+                $("#emp5b").html(95);
+                }
+
+
+            }
+            if($('#3').is(":checked")){
+                if($('#14').is(":not(:checked)") && $('#2').is(":not(:checked)") && $('#4').is(":checked")){
+                        $("#img1").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img1").hide();$("#img15").hide();$("#img16").hide();$("#img17").hide();
+                        $("#price").html(550);
+                $("#cost").html(345);
+                $("#profit").html(205);
+                $("#impact_price").html(50);
+                $("#impact_cost").html(45);
+                $("#impact_profit").html(5);
+                $("#emp1b").html(90);
+                
+                $("#emp2b").html(90);
+                $("#emp3b").html(105);
+                $("#emp4b").html(90);
+                $("#emp5b").html(95);
+                }               
+                else  if($('#1').is(":not(:checked)") && $('#2').is(":not(:checked)") && $('#4').is(":not(:checked)")){
+                     $("#img15").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img1").hide();$("#img16").hide();$("#img17").hide();
+                     $("#price").html(520);
+                $("#cost").html(320);
+                $("#profit").html(200);
+                $("#impact_price").html(20);
+                $("#impact_cost").html(20);
+                $("#impact_profit").html(0);
+                $("#emp1b").html(85);
+                
+                $("#emp2b").html(95);
+                $("#emp3b").html(110);
+                $("#emp4b").html(90);
+                $("#emp5b").html(97);
+                }
+
+
+
+            }
+            else if($('#4').is(":checked")){
+
+                if($('#1').is(":not(:checked)") && $('#2').is(":not(:checked)") && $('#3').is(":not(:checked)")){
+                    $("#img16").show();$("#img2").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img1").hide();$("#img17").hide();
+                    $("#price").html(530);
+                $("#cost").html(325);
+                $("#profit").html(205);
+                $("#impact_price").html(30);
+                $("#impact_cost").html(25);
+                $("#impact_profit").html(5);
+                $("#emp1b").html(85);
+                
+                $("#emp2b").html(95);
+                $("#emp3b").html(100);
+                $("#emp4b").html(95);
+                $("#emp5b").html(94);
+
+                }
+            }
+
+            else if(($('#1').is(":not(:checked") && $('#2').is(":not(:checked") && $('#3').is(":not(:checked") && $('#4').is(":not(:checked"))){
+                
+                 $("#img17").show();$("#img1").hide();$("#img3").hide();$("#img4").hide();$("#img5").hide();$("#img6").hide();$("#img7").hide();$("#img8").hide();$("#img9").hide();$("#img10").hide();$("#img11").hide();$("#img12").hide();$("#img13").hide();$("#img14").hide();$("#img15").hide();$("#img16").hide();$("#img1").hide();
+
+                 
+
+
+
+            }
+
+            
+});
+$(document).ready(function(){
+    Highcharts.chart('graph', {
+    data: {
+        table: 'graphtable'
+    },
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Forcast by the team with and without options'
+    },
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'Units'
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' +
+                this.point.y + ' ' + this.point.name.toLowerCase();
+        }
+    }
+
+});
+
+
+        });
+
+
+$(document).ready(function(){
+    Highcharts.chart('graph1', {
+    
+    data: {
+  table: document.getElementById('graphtable1')
+    },
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Data extracted from a HTML table in the page'
+    },
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'Units'
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' +
+                this.point.y + ' ' + this.point.name.toLowerCase();
+        }
+    }
+
+});
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+        <div class="row">
+        <h3>Employee Forcast of monthly sales<p></p><small> <i> the data is a representation of their own research</i></small></h3>
+			<table class="table" id="graphtable">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Basic</th>
+            <th>Updated</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <th id="employee1">{{ demand.employee_name1 }}</th>
+            <td id="emp1a">{{ demand.monthly_forcast1 }}</td>
+            <td id="emp1b">76</td>
+
+        </tr>
+        <tr>
+            <th id="employee2">{{ demand.employee_name2 }}</th>
+            <td id="emp2a">{{ demand.monthly_forcast2 }}</td>
+            <td id="emp2b">{{ demand.monthly_forcast_update1 }}</td>
+
+        </tr>
+        <tr>
+            <th id="employee3">{{ demand.employee_name3 }}</th>
+            <td id="emp3a">{{ demand.monthly_forcast3 }}</td>
+            <td id="emp3b">{{ demand.monthly_forcast_update1 }}</td>
+
+        </tr>
+        <tr>
+            <th id="employee4">{{ demand.employee_name4 }}</th>
+            <td id="emp4a">{{ demand.monthly_forcast4 }}</td>
+            <td id="emp4b">{{ demand.monthly_forcast_update1 }}</td>
+
+        </tr>
+
+        <tr>
+            <th id="employee5">Avg</th>
+            <td id="emp5a">99</td>
+            <td id="emp5b">88</td>
+
+        </tr>
+    </tbody>
+</table>
+
+			
+
+
+		</div>
+        <div class="row">
+
+<h3>Estimated Impact <small>Per-Unit</small></h3>
+
+            <table class="table" >
+            <thead class="thead-default">
+            <tr>
+                  <th></th>
+                  <th>Price</th>
+                  <th>Cost</th>
+                  <th>Profit</th>
+            </tr>
+            <tr>
+                  <th></th>
+                  <td id="price">200</td>
+                  <td id="cost">130</td>
+                  <td id="profit">70</td>
+            </tr>
+
+            <tr>
+                  <th>Impact Per Unit</th>
+                  <td id="impact_price">0</td>
+                  <td id="impact_cost">0</td>
+                  <td id="impact_profit">0</td>
+            </tr>
+            </thead>
+            </table>
+            </div>
+</div>
+
+		<div class="col-md-6">
+		 <img class="myimg" src='{% static "img/watches/1.png" %}' id="img1" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/2.png" %}' id="img2" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/3.png" %}' id="img3" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/4.png" %}' id="img4" alt="logo" height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/5.png" %}' id="img5" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/6.png" %}' id="img6" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/7.png" %}' id="img7" alt="logo"  height="500" width="600"style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/8.png" %}' id="img8" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/9.png" %}' id="img9" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/10.png" %}' id="img10" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/11.png" %}' id="img11" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/12.png" %}' id="img12" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/13.png" %}' id="img13" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/14.png" %}' id="img14" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+		 <img class="myimg" src='{% static "img/watches/15.png" %}' id="img15" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+         <img class="myimg" src='{% static "img/watches/16.png" %}' id="img16" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px; display: none;" />
+         <img class="myimg" src='{% static "img/watches/17.png" %}' id="img17" alt="logo"  height="500" width="600" style="padding-left: 0px; padding-top: 25px;" />
+	
+
+			
+
+
+		</div>
+        <div class="col-md-3">
+        
+        
+        <form method='POST' action='' enctype='multipart/form-data'>{% csrf_token %}    
+        <h3> Choose the option <small>Your team provies detailed input on each option</small></h3>
+                                
+		<div class="row">
+			
+					      
+			<div align="center">
+					      
+					            
+					{{ form.non_field_errors }}
+                    
+                    <h3>Design</h3>
+                    <div class ="checkboxTwo">
+
+
+
+					<div class="fieldWrapper">
+                        {{ form.design.errors }}
+                        <input type="checkbox" id="1" value="{{ form.design }}
+                        <label for="{{ form.design.id_for_label }}"> </label>
+                        
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+        <div class="row">
+            
+                          
+            <div align="center">
+            <h3>Battery</h3>
+            <div class ="checkboxTwo">
+
+
+					<div class="fieldWrapper">
+					    {{ form.battery.errors }}
+					    <input type="checkbox" id="2" value="{{ form.battery }}
+					    <label for="{{ form.battery.id_for_label }}"></label>
+					    
+					</div>
+                    </div>
+                    </div>
+                    </div>
+            <div class="row">
+            <div align="center">
+            <h3>Gestures</h3>
+            <div class ="checkboxTwo">
+
+					<div class="fieldWrapper">
+                        {{ form.gestures.errors }}
+                        <input type="checkbox" id="3" value="{{ form.gestures }}
+                        <label for="{{ form.gestures.id_for_label }}"></label>
+                        
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+            <div class="row">
+            
+                          
+            <div align="center">
+            <h3>Durability</h3>
+            <div class ="checkboxTwo">
+
+					<div class="fieldWrapper">
+					    {{ form.durability.errors }}
+					    <input type="checkbox" id="4" value="{{ form.durability }}
+					    <label for="{{ form.durability.id_for_label }}" ></label>
+					    
+					</div>
+                    </div>
+                    </div>
+                    </div>
+            
+            </div>
+
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+ <h2>Choose the supply vendor</h2>
+
+<h3>This is the second part of the process. You'll need to choose vendor/vendors for your production requirements.</h3
+>
+<p>To increase production flexibility, management has decided to outsource all manufacturing, and four contract manufacturers have been identified. Casey will provide you with some additional information on the four manufacturers and their policies.</p>
+{% include 'sliderprod.html' %}
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="fieldWrapper">
+					    {{ form.monthly_order1.errors }}
+					    <label for="{{ form.monthly_order1.id_for_label }}">CC yourself?</label>
+					    {{ form.monthly_order1 }}
+					</div>
+					<div class="fieldWrapper">
+					    {{ form.monthly_order2.errors }}
+					    <label for="{{ form.monthly_order2.id_for_label }}">CC yourself?</label>
+					    {{ form.monthly_order2 }}
+					</div>
+					<div class="fieldWrapper">
+					    {{ form.monthly_order3.errors }}
+					    <label for="{{ form.monthly_order3.id_for_label }}">CC yourself?</label>
+					    {{ form.monthly_order3 }}
+					</div>
+					<input type='submit' class='btn btn-default' value='Submit' />
+
+
+					</div>
+					</form>
+
+
+		</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
