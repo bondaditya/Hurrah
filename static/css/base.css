@@ -4,6 +4,8 @@ h1 {
 }
 p {
     color: #2F4F4F;
+    text-align: justify;
+    text-justify: inter-word;
     
 
 }

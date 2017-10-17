@@ -15,16 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from case.views import ProductCreateView, ForcastCreateView, IntroductionView
+from case.views import ProductCreateView, ForcastCreateView, IntroductionView, ReportView
 from django.conf.urls.static import static
 from django.conf import settings
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^design$', ProductCreateView,name='product'),
+    url(r'^quarter$', ProductCreateView,name='product'),
+    url(r'^quarter2$', ProductCreateView,name='product2'),
+    url(r'^quarter3$', ProductCreateView,name='product3'),
+    url(r'^quarter4$', ProductCreateView,name='product4'),
     url(r'^forcast$', ForcastCreateView,name='forcast'),
     url(r'^intro$', IntroductionView,name='intro'),
+    url(r'^report$', ReportView,name='reports'),
     url(r'^accounts/', include('allauth.urls')),
 ]
 
