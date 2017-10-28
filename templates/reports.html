@@ -19,6 +19,129 @@ var month9 = parseInt({{ product3.month9 }});
 var month10 = parseInt({{ product4.month10 }});
 var month11 = parseInt({{ product4.month11 }});
 var month12 = parseInt({{ product4.month12 }});
+var monthly_order4 = month4+parseInt({{ product.monthly_order3 }});
+var monthly_order5 = month5+parseInt({{ product.monthly_order3 }});
+var monthly_order6 = month6+parseInt({{ product.monthly_order3 }});
+var monthly_order7 = month7+parseInt({{ product2.monthly_order3 }});
+var monthly_order8 = month8+parseInt({{ product2.monthly_order3 }});
+var monthly_order9 = month9+parseInt({{ product2.monthly_order3 }});
+var monthly_order10 = month10+parseInt({{ product3.monthly_order3 }});
+var monthly_order11 = month11+parseInt({{ product3.monthly_order3 }});
+var monthly_order12 = month12+parseInt({{ product3.monthly_order3 }});
+
+$('#Apr1').html(monthly_order4);
+
+$('#May1').html(monthly_order5);
+
+$('#Jun1').html(monthly_order6);
+
+$('#Jul1').html(monthly_order7);
+
+$('#Aug1').html(monthly_order8);
+
+$('#Sep1').html(monthly_order9);
+
+$('#Oct1').html(monthly_order10);
+
+$('#Nov1').html(monthly_order11);
+
+$('#Dec1').html(monthly_order12);
+var sales1 = 10;
+var sales2 = 10;
+var sales3 = 10;
+var sales4 = 10;
+var sales5 = 10;
+var sales6 = 10;
+var sales7 = 10;
+var sales8 = 10;
+var sales9 = 10;
+var sales10 = 10;
+var sales11 = 10;
+var sales12 = 10;
+
+$('#Jan2').html(sales1);
+
+$('#Feb2').html(sales2);
+
+$('#Mar2').html(sales3);
+
+$('#Apr2').html(sales4);
+
+$('#May2').html(sales5);
+
+$('#Jun2').html(sales6);
+
+$('#Jul2').html(sales7);
+
+$('#Aug2').html(sales8);
+
+$('#Sep2').html(sales9);
+
+$('#Oct2').html(sales10);
+
+$('#Nov2').html(sales11);
+
+$('#Dec2').html(sales12);
+
+var inv1 = Math.max(0,month1-sales1);
+var inv2 = Math.max(0,month2-sales2);
+var inv3 = Math.max(0,month3-sales3);
+var inv4 = Math.max(0,month4-sales4);
+var inv5 = Math.max(0,month5-sales5);
+var inv6 = Math.max(0,month6-sales6);
+var inv7 = Math.max(0,month7-sales7);
+var inv8 = Math.max(0,month8-sales8);
+var inv9 = Math.max(0,month9-sales9);
+var inv10 = Math.max(0,month10-sales10);
+var inv11 = Math.max(0,month11-sales11);
+var inv12 = Math.max(0,month12-sales12);
+
+$('#Jan3').html(inv1);
+
+$('#Feb3').html(inv2);
+
+$('#Mar3').html(inv3);
+
+$('#Apr3').html(inv4);
+
+$('#May3').html(inv5);
+
+$('#Jun3').html(inv6);
+
+$('#Jul3').html(inv7);
+
+$('#Aug3').html(inv8);
+
+$('#Sep3').html(inv9);
+
+$('#Oct3').html(inv10);
+
+$('#Nov3').html(inv11);
+
+$('#Dec3').html(inv12);
+
+var product_vendor1 = (parseInt({{ product.monthly_order1 }})+parseInt({{ product2.monthly_order1 }})+parseInt({{ product3.monthly_order1 }}))*350;
+
+var product_vendor2 = parseInt({{ product.monthly_order2 }})+ parseInt({{ product2.monthly_order2 }})+ parseInt({{ product3.monthly_order2 }})*300;
+
+var product_vendor3 = parseInt({{ product.monthly_order3 }})+ parseInt({{ product3.monthly_order2 }})+ parseInt({{ product3.monthly_order3 }})*280;
+var total_product_cost = product_vendor1+product_vendor2+product_vendor3;
+
+$('#product').html(total_product_cost);
+
+var inventory_cost = (inv1+inv2+inv3+inv4+inv5+inv6+inv7+inv8+inv9+inv10+inv11+inv12)*10;
+$('#inventory').html(inventory_cost);
+var total_cost = total_product_cost+inventory_cost;
+$('#totalcost').html(total_cost);
+
+
+
+
+
+
+
+
+
 
 
 $(document).ready(function(){
@@ -167,9 +290,9 @@ $(document).ready(function(){
   <tbody>
     <tr>
       <th scope="row">Ordered</th>
-      <td id="Jan1">Mark</td>
-      <td id="Feb1">Otto</td>
-      <td id="Mar1">@mdo</td>
+      <td id="Jan1">{{ product.month1 }}</td>
+      <td id="Feb1">{{ product.month2 }}</td>
+      <td id="Mar1">{{ product.month3 }}</td>
       <td id="Apr1">Mark</td>
       <td id="May1">Otto</td>
       <td id="Jun1">@mdo</td>
@@ -214,7 +337,7 @@ $(document).ready(function(){
 </table>
 </div>
 <div class="col-md-4">
-    <a href="#" class="btn btn-primary btn-lg" role="button">Meet the Board</a>
+   
 </div>
 
 </div>
