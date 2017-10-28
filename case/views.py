@@ -84,6 +84,7 @@ def ForcastCreateView(request):
 		instance = form.save(commit=False)
 		instance.user = request.user 
 		instance.save()
+		return redirect('product')
 
 	context = {
 	'form':form,
